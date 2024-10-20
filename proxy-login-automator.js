@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 var net = require('net'), tls = require('tls');
+tls.DEFAULT_MIN_VERSION = 'TLSv1.2';
 var HTTPParser = process.binding('http_parser').HTTPParser;
 var http = require('http'), https = require('https');
 var url = require('url');
